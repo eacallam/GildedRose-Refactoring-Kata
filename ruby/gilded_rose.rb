@@ -10,6 +10,9 @@ class GildedRose
         if item.quality > 0
           if item.name != "Sulfuras, Hand of Ragnaros"
             item.quality = item.quality - 1
+            if item.name.downcase.include? "conjured"
+              item.quality = item.quality - 1
+            end
           end
         end
       else
